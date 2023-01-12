@@ -19,11 +19,8 @@
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 
-
-
   <!-- Custom styles for this template -->
   <link href="../assets/css/headers.css" rel="stylesheet" />
-  <link href="../assets/css/heroes.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <!---->
@@ -64,44 +61,60 @@
       </div>
     </header>
   </div>
-  <!--Conteúdo lista de espera-->
-  <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <!-- Inicio do formulario -->
-    <div class="text-secondary px-4 py-5 text-center">
-      <div class="py-5">
-        <h1 class="display-4 fw-bold">Lista de espera</h1>
-        <p>
-          Deixe seus dados e seja avisado sobre o lançamento! Você também
-          poderá ser convidado para ser um testador beta.
-        </p>
-        <!--<form method="get" action="dados">-->
-        <form>
-          <fieldset title="Endereço" style="padding: 20px; margin: 20px; border: solid">
-            <legend>Dados Pessoais</legend>
-            <label for="">Nome Completo: <input type="text" id="full_name"/></label>
-            <label for="">RG: <input type="number" id="rg" placeholder="Somente Números"/></label><br /><br />
-            <label for="">E-mail: <input type="email" id="email"/></label>
-            <label for="">Senha: <input type="password" id="password"/></label>
-            <label for="">Confirmação de Senha: <input type="password" id="password_confirmation"/></label>
-          </fieldset>
-          <fieldset title="Endereço" style="padding: 20px; margin: 20px; border: solid">
-            <legend>Dados de endereço</legend>
-            <label>Cep:
-              <input name="cep" type="number" id="cep" placeholder="Somente Números" value="" size="10" maxlength="9" /></label>
-            <label>Rua: <input name="rua" type="text" id="rua" size="auto" /></label>
-            <label>Bairro:
-              <input name="bairro" type="text" id="bairro" size="20" /></label><br /><br />
-            <label>Cidade: <input name="cidade" type="text" id="cidade" size="20" /></label>
-            <label>Estado: <input name="uf" type="text" id="uf" size="2" /></label>
-            <label>IBGE: <input name="ibge" type="text" id="ibge" size="8" /></label>
-          </fieldset>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">
-            Enviar
-          </button>
-        </form>
-      </div>
+  <div class="text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-4 fw-bold">Lista de espera</h1>
+      <p>
+        Deixe seus dados e seja avisado sobre o lançamento! Você também
+        poderá ser convidado para ser um testador beta.
+      </p>
     </div>
   </div>
+  <!--Conteúdo lista de espera-->
+
+  <!--<form method="get" action="dados">-->
+  <form method="get" action="dados" target="#">
+    <div class="text-center" id="divao1">
+        <label for="" >Nome:</label>
+        <input type="text" id="full_name" required />      
+
+        <label for="" >Sobrenome:</label>
+        <input type="text" id="full_name" required />      
+
+        <label for="" >RG:</label>
+        <input type="number" id="rg" placeholder="Somente Números" required />      
+
+        <label for="" >E-mail:</label>
+        <input type="email" id="email" required />      
+
+        <label for="" >Senha:</label>
+        <input type="password" id="password" required />      
+
+        <label for="" >Confirme a senha:</label>
+        <input type="password" id="password_confirmation" required />      
+
+        <label >Cep:</label>
+        <input name="cep" type="number" id="cep" placeholder="Somente Números" value="" size="10" maxlength="9" />      
+
+        <label >Rua:</label>
+        <input name="rua" type="text" id="rua" size="auto" />      
+
+        <label >Bairro:</label>
+        <input name="bairro" type="text" id="bairro" />      
+
+        <label >Cidade:</label>
+        <input name="cidade" type="text" id="cidade" />      
+
+        <label >Estado:</label>
+        <input name="uf" type="text" id="uf" />      
+
+        <label >IBGE:</label>
+        <input name="ibge" type="text" id="ibge" />      
+        <button class="btn btn-primary" type="submit">
+          Enviar
+        </button>
+    </div>
+  </form>
 
   <!-- FOOTER -->
   <br /><br />

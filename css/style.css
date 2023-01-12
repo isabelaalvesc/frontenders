@@ -48,3 +48,32 @@ p {
     text-decoration: none;
     color: #555;
 }
+
+.col:hover :not(:hover) {
+    opacity: 1;
+}
+
+.col:hover {
+    scale: 1.1;
+}
+
+.bg-white:hover :not(:hover) {
+    opacity: 1;
+}
+
+.bg-white:hover {
+    scale: 1.1;
+}
+
+/* LISTA */
+form {
+    display: flex;
+    justify-content: space-around;
+}
+
+#divao1 {
+    border: solid;
+    padding: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
