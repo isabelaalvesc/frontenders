@@ -40,9 +40,6 @@
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li>
-          <a href="../index.html" class="nav-link px-2 link-secondary">Início</a>
-        </li>
-        <li>
           <a href="planos.html" class="nav-link px-2 link-dark">Serviço</a>
         </li>
         <li>
@@ -73,46 +70,44 @@
   <!--Conteúdo lista de espera-->
 
   <!--<form method="get" action="dados">-->
-  <form method="get" action="dados" target="#">
-    <div class="text-center" id="divao1">
-        <label for="" >Nome:</label>
-        <input type="text" id="full_name" required />      
+  <form method="get" action="dados" target="#" >
+    <div class="text-center w-50" id="divao1"class="mt-0">
+      
+      <label for="full_name">Nome Completo:</label><br/>
+      <input type="text" id="full_name" name="full_name" required /><br/><br/>
 
-        <label for="" >Sobrenome:</label>
-        <input type="text" id="full_name" required />      
+      <label for="rg">RG:</label><br/>
+      <input type="number" name="rg" id="rg" placeholder="Somente Números" required /><br/><br/>
 
-        <label for="" >RG:</label>
-        <input type="number" id="rg" placeholder="Somente Números" required />      
+      <label for="email">E-mail:</label><br/>
+      <input name="email"type="email" id="email" required /><br/><br/>
 
-        <label for="" >E-mail:</label>
-        <input type="email" id="email" required />      
+      <label for="password">Senha:</label><br/>
+      <input name="password" type="password" id="password" required /><br/><br/>
 
-        <label for="" >Senha:</label>
-        <input type="password" id="password" required />      
+      <label for="password_confirmation">Confirme a senha:</label><br/>
+      <input name="password_confirmation" type="password" id="password_confirmation" required /><br/><br/>
 
-        <label for="" >Confirme a senha:</label>
-        <input type="password" id="password_confirmation" required />      
+      <label for="cep">CEP:</label><br/>
+      <input name="cep" type="number" id="cep" placeholder="Somente Números" value="" size="10" maxlength="9" /><br/><br/>
 
-        <label >Cep:</label>
-        <input name="cep" type="number" id="cep" placeholder="Somente Números" value="" size="10" maxlength="9" />      
+      <label for="rua">Rua:</label><br/>
+      <input name="rua" type="text" id="rua" size="auto" /><br/><br/>
 
-        <label >Rua:</label>
-        <input name="rua" type="text" id="rua" size="auto" />      
+      <label for="bairro">Bairro:</label><br/>
+      <input name="bairro" type="text" id="bairro" /><br/><br/>
 
-        <label >Bairro:</label>
-        <input name="bairro" type="text" id="bairro" />      
+      <label for="cidade">Cidade:</label><br/>
+      <input name="cidade" type="text" id="cidade" /><br/><br/>
 
-        <label >Cidade:</label>
-        <input name="cidade" type="text" id="cidade" />      
+      <label for="uf">Estado:</label><br/>
+      <input name="uf" type="text" id="uf" /><br/><br/>
 
-        <label >Estado:</label>
-        <input name="uf" type="text" id="uf" />      
-
-        <label >IBGE:</label>
-        <input name="ibge" type="text" id="ibge" />      
-        <button class="btn btn-primary" type="submit">
-          Enviar
-        </button>
+      <label for="ibge">IBGE:</label><br/>
+      <input name="ibge" type="text" id="ibge" /><br/><br/>
+      <button class="btn btn-primary" type="submit">
+        Enviar
+      </button>
     </div>
   </form>
 

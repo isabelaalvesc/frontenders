@@ -30,7 +30,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/style.css" />
 
     <style>
       .bd-placeholder-img {
@@ -53,6 +52,35 @@
   </head>
 
   <body class="text-center">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="../index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-code-slash"
+          viewBox="0 0 16 16">
+          <path
+            d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+        </svg>
+        <b>FrontEnders &trade;</b></a>
+
+      <ul class="nav col-10 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li>
+          <a href="planos.html" class="nav-link px-2 link-dark">Serviço</a>
+        </li>
+        <li>
+          <a href="lista.html" class="nav-link px-2 link-dark">Lista</a>
+        </li>
+        <li>
+          <a href="equipe.html" class="nav-link px-2 link-dark">Desenvolvedores</a>
+        </li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <a href="login.html"><button type="button" class="btn btn-outline-primary me-2">
+            Login
+          </button></a>
+        <!--<a href="cadastro.html"><button type="button" class="btn btn-primary">Cadastro</button></a>-->
+      </div>
+    </header>
     <main class="form-signin">
       <form method="get" onreset="senha()">
         <img
@@ -69,10 +97,10 @@
             sua senha.
           </p>
         </div>
-        <div class="form-floating">
+        <div class="form-floating d-flex justify-content-center">
           <input
             type="email"
-            class="form-control"
+            class="form-control w-50 "
             id="floatingInput"
             placeholder="usuario@exemplo.com"
             required
@@ -80,17 +108,17 @@
           <label for="floatingInput">Email cadastrado</label>
         </div>
         <button
-          class="w-100 btn btn-lg btn-primary"
+          class="w-25 btn btn-lg btn-primary"
           type="submit"
           onclick="senha()"
         >
           Enviar
         </button>
-        <br /><br />
+        <br /><!--<br />
         <p class="mt-5 mb-3 text-muted">
           Não é cadastrado?<br /><br /><a href="cadastro.html"
             >Ir para a página de cadastro</a
-          >
+          >-->
         </p>
         <p class="mt-5 mb-3 text-muted">
           Já é cadastrado?<br /><br /><a href="login.html"
