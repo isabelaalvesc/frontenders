@@ -121,16 +121,30 @@
 
           <!-- Email input -->
           <div class="form-outline mb-4">
-            <input type="email" id="form1Example1" class="form-control" />
+            <input type="email" id="email" class="form-control" />
             <label class="form-label" for="form1Example1">Email</label>
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-4">
-            <input type="password" id="form1Example2" class="form-control" />
+            <input type="password" id="password" class="form-control" />
             <label class="form-label" for="form1Example2">Senha</label>
           </div>
 
+          <!-- Submit button -->
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button
+              type="submit"
+              class="btn btn-primary btn-outline-info btn-lg px-4 me-sm-3 mb-4 fw-bold"
+              onclick="login();"
+            >
+              Entrar
+            </button>
+          </div>
+          <div class="col m0">
+            <a href="senha.html">Esqueci minha senha </a>
+          </div>
+        </div><br><br>
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
               <div class="form-check">
@@ -145,22 +159,7 @@
                   Lembra de mim
                 </label>
               </div>
-            </div>
-
-            <div class="col">
-              <a href="/views/senha.html">Esqueci minha senha </a>
-            </div>
-          </div>
-
-          <!-- Submit button -->
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button
-              type="submit"
-              class="btn btn-primary btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
-            >
-              Entrar
-            </button>
-          </div>
+            </div></div>
           <p class="mt-5 mb-3 text-muted">
             <!-- Não é cadastrado?<br /><br /><a href="cadastro.html">Ir para a página de cadastro</a>
               </p>-->
@@ -190,13 +189,22 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Tecnologias</h6>
               <p>
-                <a href="#!" class="text-reset">HTML5</a>
+                <!--<a href="#!" class="text-reset">HTML5</a>-->
+                HTML5
               </p>
               <p>
-                <a href="#!" class="text-reset">CSS3</a>
+                <!--<a href="#!" class="text-reset">CSS3</a>-->
+                CSS3
               </p>
               <p>
-                <a href="#!" class="text-reset">JavaScript</a>
+                <!--<a href="#!" class="text-reset">JavaScript</a>-->
+                JavaScript
+              </p>
+              <p>
+                Bootstrap4
+              </p>
+              <p>
+                APIRest
               </p>
             </div>
 
@@ -204,13 +212,13 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Links úteis</h6>
               <p>
-                <a href="#!" class="text-reset">Planos</a>
+                <a href="./planos.html" class="text-reset">Planos</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Lista</a>
+                <a href="lista.html" class="text-reset">Lista de Espera</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Equipe</a>
+                <a href="./equipe.html" class="text-reset">Equipe</a>
               </p>
             </div>
 
@@ -254,7 +262,8 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
-
+    <script src="../controllers/CadastroController.js"></script>
+    <script src="../controllers/LoginController.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js" defer></script>
   </body>
 </html>
