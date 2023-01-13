@@ -47,7 +47,8 @@
           <path
             d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
         </svg>
-        <b>FrontEnders &trade;</b></a>
+        <p style="font-size: 3em;">FrontEnders &trade;</p>
+      </a>
       <!-- 
                 <ul class="nav col-10 col-md-auto mb-2 justify-content-center mb-md-0">
                   <li>
@@ -64,9 +65,8 @@
   </div>
   <main class="form-signin">
     <form method="get" onreset="senha()">
-      <!--       <img class="mb-4" src="../assets/img/logo-op2.png" alt="" width="auto" height="200" />
- -->
-      <h1 class="h1 mb-3 fw-bold">Recuperar a senha</h1>
+
+      <!--       <h1 class="h1 mb-3 fw-bold">Recuperar a senha</h1>
       <div>
         <p class="mt-5 mb-3 text-muted" id="menssagem">
           Digite seu endereço de e-mail e enviaremos um link para redefinir sua senha.
@@ -78,25 +78,33 @@
       </div><br>
       <button class="w-25 mb-3 btn btn-lg btn-primary" type="submit" onclick="senha()">
         Enviar
-      </button>
-      <!--<br />
-        <p class="mt-5 mb-3 text-muted">
-          Não é cadastrado?<br /><br /><a href="cadastro.html"
-            >Ir para a página de cadastro</a
-          >-->
-      </p>
+      </button> -->
+
+      <div class="text-secondary text-center">
+        <div class="py-5">
+          <h1 class="display-6 fw-bold">
+            Recuperar a senha</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">
+              Digite abaixo o e-mail utilizado para o cadastro. Se for um email válido enviaremos as intruções para a
+              recuperação da sanha.</p>
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatingInput" placeholder="usuario@exemplo.com" />
+              <label for="floatingInput">Digite seu e-mail</label>
+            </div>
+            <br /><br />
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="submit" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">
+                Enviar </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p class="mt-5 mb-3 text-muted">
         Já é cadastrado?<br /><br /><a href="login.html">Ir para a página de login</a>
       </p>
-      <!--       <p class="mt-5 mb-3 text-muted">
-        <a href="../index.html">Voltar para a página inicial</a>
-      </p>
- -->
-      <p>
-        &copy; 2022-2023 FrontEnders &trade; <br />
-        &middot; <a href="../index.html">Início</a> &middot;
-        <a href="#">Privacidade</a> &middot; <a href="#">Termos</a>
-      </p>
+
     </form>
   </main>
   <!-- Footer -->
@@ -170,7 +178,9 @@
           <path
             d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
         </svg>
-        <b>FrontEnders &trade;</b></a>
+        <p>FrontEnders &trade;</p>
+      </a>
+      </a>
     </div>
     <!-- Copyright -->
   </footer>
