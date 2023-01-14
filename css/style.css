@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
@@ -9,11 +9,12 @@ body {
 a {
     text-decoration: none;
 }
-
+/*
 h1,
 p {
     color: #000;
 }
+*/
 
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -43,7 +44,8 @@ p {
 }
 
 .social-link:hover,
-.social-link:focus {
+.social-link:focus,
+#animacaoDiv:hover, #animacaoDiv:focus {
     background: #ddd;
     text-decoration: none;
     color: #555;
@@ -64,8 +66,8 @@ p {
 .bg-white:hover {
     scale: 1.1;
 }
-
-/* LISTA */
+/*
+LISTA
 form {
     display: flex;
     justify-content: space-around;
@@ -76,4 +78,4 @@ form {
     padding: 1em;
     align-items: center;
     flex-wrap: wrap;
-}
+} */
