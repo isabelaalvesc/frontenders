@@ -17,7 +17,7 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Bootstrap core CSS -->
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css" />
 
   <!-- Custom styles for this template -->
   <link href="../assets/css/headers.css" rel="stylesheet" />
@@ -25,45 +25,48 @@
 <!---->
 
 <body>
-  <!---->
+  <!-- Barra de navegação -->
   <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-auto">
       <a href="../index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-code-slash"
-          viewBox="0 0 16 16">
-          <path
-            d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-        </svg>
-        <p>FrontEnders &trade;</p>
-      </a>
+        <!--         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-code-slash"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                      </svg> -->
+        <b><span class="bg-primary text-white logo">
+            < Front </span>
+              <span class="text-primary bg-white logo">Enders / ></span>
+              &trade;</b></a>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-10 col-md-auto mb-2 justify-content-center mb-md-0">
         <li>
-          <a href="planos.html" class="nav-link px-2 link-dark">Serviço</a>
+          <a href="./planos.html" class="nav-link px-2 link-dark">Serviço</a>
         </li>
         <li>
-          <a href="lista.html" class="nav-link px-2 link-dark">Lista</a>
+          <a href="./lista.html" class="nav-link px-2 link-dark">Lista</a>
         </li>
         <li>
-          <a href="equipe.html" class="nav-link px-2 link-dark">Desenvolvedores</a>
+          <a href="./equipe.html" class="nav-link px-2 link-dark">Desenvolvedores</a>
         </li>
       </ul>
 
       <div class="col-md-3 text-end">
-        <a href="login.html"><button type="button" class="btn btn-outline-primary me-2">
+        <a href="./login.html"><button type="button" class="btn btn-outline-primary me-2">
             Login
           </button></a>
         <!--<a href="cadastro.html"><button type="button" class="btn btn-primary">Cadastro</button></a>-->
       </div>
     </header>
   </div>
+  <!-- Barra de navegação -->
   <main>
     <div class="text-secondary px-4 text-center">
       <div class="py-1">
         <h1 class="display-4 fw-bold">Lista de espera</h1>
         <p>
-          Deixe seus dados e seja avisado sobre o lançamento! Você também poderá
-          ser convidado para ser um testador beta.
+          Deixe seus dados e seja avisado sobre o lançamento! Você também
+          poderá ser convidado para ser um testador beta.
         </p>
       </div>
     </div>
@@ -126,49 +129,49 @@
             </div>
           </div>
         </div>
-          <div class="row mb-4">
-            <div class="col">
-              <div class="form-outline">
-                <input type="text" id="rg" class="form-control" placeholder="123456789" required />
-                <label class="form-label" for="form6Example2">RG:</label>
-              </div>
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="rg" class="form-control" placeholder="123456789" required />
+              <label class="form-label" for="form6Example2">RG:</label>
             </div>
+          </div>
 
-            <div class="col">
-              <div class="form-outline">
-                <input type="text" id="cpf" class="form-control" placeholder="123456789101" required />
-                <label class="form-label" for="form6Example2">CPF:</label>
-              </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="cpf" class="form-control" placeholder="123456789101" required />
+              <label class="form-label" for="form6Example2">CPF:</label>
             </div>
           </div>
-          <div class="row mb-4">
-            <div class="col">
-              <div class="form-outline">
-                <input type="email" id="email" class="form-control" placeholder='email@email.com' required />
-                <label class="form-label" for="form6Example3">Email</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-outline">
-                <input type="number" id="phone" class="form-control" placeholder='21123456789' required />
-                <label class="form-label" for="form6Example4">Telefone</label>
-              </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="email" id="email" class="form-control" placeholder="email@email.com" required />
+              <label class="form-label" for="form6Example3">Email</label>
             </div>
           </div>
-          <div class="row mb-4">
-            <div class="col">
-              <div class="form-outline">
-                <input type="password" id="password" class="form-control" required />
-                <label class="form-label" for="form6Example5">Senha</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-outline">
-                <input type="password" id="password_confirmation" class="form-control" required />
-                <label class="form-label" for="form6Example6">Confirmação de Senha</label>
-              </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="number" id="phone" class="form-control" placeholder="21123456789" required />
+              <label class="form-label" for="form6Example4">Telefone</label>
             </div>
           </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="password" id="password" class="form-control" required />
+              <label class="form-label" for="form6Example5">Senha</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="password" id="password_confirmation" class="form-control" required />
+              <label class="form-label" for="form6Example6">Confirmação de Senha</label>
+            </div>
+          </div>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Dados de endereço</legend>
@@ -180,27 +183,27 @@
         </div>
         <!-- Text input -->
         <div class="form-outline mb-4">
-          <input name="rua" type="text" id="rua" class="form-control" disabled/>
+          <input name="rua" type="text" id="rua" class="form-control" disabled />
           <label class="form-label" for="form6Example4">Rua</label>
         </div>
         <!-- Text input -->
         <div class="form-outline mb-4">
-          <input name="bairro" type="text" id="bairro" class="form-control" required disabled/>
+          <input name="bairro" type="text" id="bairro" class="form-control" required disabled />
           <label class="form-label" for="form6Example4">Bairro</label>
         </div>
         <!-- Text input -->
         <div class="form-outline mb-4">
-          <input name="cidade" type="text" id="cidade" class="form-control" disabled/>
+          <input name="cidade" type="text" id="cidade" class="form-control" disabled />
           <label class="form-label" for="form6Example4">Cidade</label>
         </div>
         <!-- Text input -->
         <div class="form-outline mb-4">
-          <input name="uf" type="text" id="uf" class="form-control" disabled/>
+          <input name="uf" type="text" id="uf" class="form-control" disabled />
           <label class="form-label" for="form6Example4">UF</label>
         </div>
         <!-- Text input -->
         <div class="form-outline mb-4">
-          <input name="ibge" type="text" id="ibge" class="form-control" disabled/>
+          <input name="ibge" type="text" id="ibge" class="form-control" disabled />
           <label class="form-label" for="form6Example4">IBGE</label>
         </div>
         <!-- API VIA CEP -->
@@ -219,10 +222,9 @@
         </button>
       </div>
     </form>
-
   </main>
   <!-- Footer -->
-  <footer class="text-center text-lg-start text-muted">
+  <footer class="text-center text-lg-start text-dark">
     <!-- Section: Links  -->
     <section class="">
       <div class="container text-center text-md-start mt-5">
@@ -233,7 +235,13 @@
             <h6 class="text-uppercase fw-bold mb-4">
               <i class="fas fa-gem me-3"></i>Nossa empresa
             </h6>
-            <p>Desenvolvemos soluções para todos as necessidades do seu negócio.<br> Fundada em 2015 na região da zona norte da cidade do Rio de Janeiro, a FrontEnders é uma empresa especialista em desenvolvimento de sites profíssionais.</p>
+            <p class="text-primary fw-bold">
+              Desenvolvemos soluções para todos as necessidades do seu
+              negócio.<br />
+              Fundada em 2015 na região da zona norte da cidade do Rio de
+              Janeiro, a FrontEnders é uma empresa especialista em
+              desenvolvimento de sites profíssionais.
+            </p>
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -251,12 +259,8 @@
               <!--<a href="#!" class="text-reset">JavaScript</a>-->
               JavaScript
             </p>
-            <p>
-              Bootstrap4
-            </p>
-            <p>
-              APIRest
-            </p>
+            <p>Bootstrap</p>
+            <p>API Via Cep</p>
           </div>
 
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -266,7 +270,7 @@
               <a href="./planos.html" class="text-reset">Planos</a>
             </p>
             <p>
-              <a href="lista.html" class="text-reset">Lista de Espera</a>
+              <a href="./lista.html" class="text-reset">Lista de Espera</a>
             </p>
             <p>
               <a href="./equipe.html" class="text-reset">Equipe</a>
@@ -288,19 +292,20 @@
 
     <!-- Copyright -->
     <div class="d-flex align-items-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
-      <a href="index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-code-slash"
+      <a href="../index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <!--         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-code-slash"
           viewBox="0 0 16 16">
           <path
             d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-        </svg>
-        <b>FrontEnders &trade;</b></a>
+        </svg> -->
+        <b><span class="bg-primary text-white logo">
+            < Front </span>
+              <span class="text-primary bg-white logo">Enders / ></span>
+              &trade;</b></a>
     </div>
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
-
-  <!---->
   <!--SCRIPT VIA CEP-->
   <script src="../controllers/ApiCepController.js"></script>
   <script src="../models/Cadastro.js"></script>
