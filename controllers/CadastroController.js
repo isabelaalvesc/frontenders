@@ -121,8 +121,9 @@ cadastrar=function() {
         alert("Você se cadastrou na lista de Espera");
     }
     else {
-        console.log("Erro")
-        alert(erroPassword);
+        console.log(`1 - ${erroPassword}
+                     2 - ${erroCPF}`)
+        //alert(erroPassword);
     }
 }
 
