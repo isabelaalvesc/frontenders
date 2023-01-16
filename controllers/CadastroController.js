@@ -116,7 +116,7 @@ cadastrar=function() {
                                 document.getElementById('ibge').value)
     let erroPassword = cadastroController.passwordIsValid(cadastro.password, cadastro.password_confirmation)
     let erroCPF= cadastroController.IsValidCPF(cadastro.cpf);
-    if ((erroPassword == true)||(erroCPF == true)) {
+    if ((erroPassword == true)&&(erroCPF == true)) {
         cadastroController.array_cadastro.push(cadastro)
         alert("Você se cadastrou na lista de Espera");
     }
