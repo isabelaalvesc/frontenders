@@ -14,6 +14,12 @@ class CadastroController {
             'Senha tem menos de 8 caracteres',
             'Senha tem mais de 20 caracteres']
     }
+    erroChecked=function(termos){
+        if(termos.checked){
+            return true
+        }
+        return `Precisa estar de acordo com os termos`
+    }
     phoneIsValid=function(phone, array_cadastro){
         for (var indice = 0; indice < array_cadastro.length; indice++) {
             if (array_cadastro[indice].phone == phone) {
@@ -141,12 +147,14 @@ class CadastroController {
             document.getElementById('bairro').value,
             document.getElementById('cidade').value,
             document.getElementById('uf').value,
-            document.getElementById('ibge').value)
+            document.getElementById('ibge').value,
+            document.getElementById('termos'))
         let erroPassword = cadastroController.passwordIsValid(cadastro.password, cadastro.password_confirmation)
         let erroCPF = cadastroController.IsValidCPF(cadastroController.array_cadastro);
         let erroEmail = cadastroController.emailIsValid(cadastro.email, cadastroController.array_cadastro) 
         let erroRG = cadastroController.rgIsValid(cadastro.rg, cadastroController.array_cadastro)
         let erroPhone = cadastroController.phoneIsValid(cadastro.phone, cadastroController.array_cadastro)
+        let erroChecked = cadastroController.erroChecked(cadastro.termos)
         if ((erroPassword == true) &&
             (erroCPF == true) &&
             (cadastro.rua != '') &&
@@ -156,7 +164,8 @@ class CadastroController {
             (cadastro.ibge != '') &&
             (erroEmail == true) &&
             (erroRG == true) &&
-            (erroPhone == true)) {
+            (erroPhone == true) &&
+            (erroChecked==true)) {
             cadastroController.array_cadastro.push(cadastro)
             alert("Você se cadastrou na lista de Espera");
         }
@@ -182,7 +191,11 @@ class CadastroController {
         else if(erroPhone != true){
             alert(`${erroPhone}`)
         }
-    }
+        else if(erroChecked != true){
+            alert(`${erroChecked}`)
+        }
+    
+}
 
 
 /*const form = document.querySelector('form');

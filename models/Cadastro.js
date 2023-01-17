@@ -2,7 +2,7 @@ class Cadastro {
     constructor(first_name, last_name, rg,
                 cpf, email, phone, password,
                 password_confirmation, cep,
-                rua, bairro, cidade, uf, ibge){
+                rua, bairro, cidade, uf, ibge, termos){
             this.first_name = first_name;
             this.last_name=last_name;
             this.rg=rg
@@ -17,6 +17,7 @@ class Cadastro {
             this.cidade=cidade
             this.uf=uf
             this.ibge=ibge
+            this.termos=termos
             
     }
     
