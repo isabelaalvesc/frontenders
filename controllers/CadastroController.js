@@ -1,18 +1,46 @@
 class CadastroController {
     constructor(first_name, last_name, rg, cpf, email, phone, password, password_confirmation) {
         this.first_name = first_name;
-        this.last_name=last_name;
-        this.rg=rg
-        this.cpf=cpf
+        this.last_name = last_name;
+        this.rg = rg
+        this.cpf = cpf
         this.email = email;
-        this.phone=phone
-        this.password=password;
-        this.password_confirmation=password_confirmation
-        this.array_cadastro = [{first_name: 'teste', last_name: 'teste', rg:'123456789', cpf:'12345678910', email: 'teste@gmail.com', phone:1234567891011, password: 'testeteste'}];
+        this.phone = phone
+        this.password = password;
+        this.password_confirmation = password_confirmation
+        this.array_cadastro = [{ first_name: 'teste', last_name: 'teste', rg: 123456789, cpf: '12345678910', email: 'teste@gmail.com', phone: 1234567891011, password: 'testeteste' }];
         this.erro = ['',
             'Senha e Confirmação diferentes',
             'Senha tem menos de 8 caracteres',
             'Senha tem mais de 20 caracteres']
+    }
+    phoneIsValid=function(phone, array_cadastro){
+        for (var indice = 0; indice < array_cadastro.length; indice++) {
+            if (array_cadastro[indice].phone == phone) {
+                return `Telefone ${phone} já cadastrado`;
+            }
+            let regex = new RegExp('^\\([0-9]{2}\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{3}-[0-9]{5}))$');
+            if (regex.test(phone) != true){
+                return `Formato de telefone invalido`
+            }
+        }
+        return true
+    }
+    rgIsValid=function(rg, array_cadastro){
+        for (var indice = 0; indice < array_cadastro.length; indice++) {
+            if (array_cadastro[indice].rg == rg) {
+                return `RG já cadastrado`;
+            }
+        }
+        return true
+    }
+    emailIsValid = function(email, array_cadastro){
+        for (var indice = 0; indice < array_cadastro.length; indice++) {
+            if (array_cadastro[indice].email == email) {
+                return `E-mail ${email} já cadastrado`;
+            }
+        }
+        return true
     }
     passwordIsValid = function (password, password_confirmation) {
         if ((password === password_confirmation) &&
@@ -30,9 +58,9 @@ class CadastroController {
             return this.erro[3];
         }
     }
-    IsValidCPF=function(array_cadastro) {
+    IsValidCPF = function (array_cadastro) {
         let cpf = document.getElementById("cpf").value;
-        cpf=cpf.replace(/[^\d]+/g,'');
+        cpf = cpf.replace(/[^\d]+/g, '');
         var cpfInteiro = new Array(11);
         var indice = 0;
         var tamanhoCPF = 11;
@@ -43,8 +71,8 @@ class CadastroController {
         if (cpf.length != tamanhoCPF) {
             return "Um CPF é composto de 11 números"
         }
-        for(var indice=0;indice<array_cadastro.length;indice++) {
-            if(array_cadastro[indice].cpf == cpf){
+        for (var indice = 0; indice < array_cadastro.length; indice++) {
+            if (array_cadastro[indice].cpf == cpf) {
                 return 'CPF já cadastrado';
             }
         }
@@ -98,48 +126,63 @@ class CadastroController {
         return true;
     }
 }
-cadastrar=function() {
-    const cadastroController = new CadastroController();
-    const cadastro = new Cadastro(document.getElementById('first_name').value, 
-                                document.getElementById('last_name').value,
-                                document.getElementById('rg').value,
-                                document.getElementById('cpf').value, 
-                                document.getElementById('email').value,
-                                document.getElementById('phone').value,
-                                document.getElementById('password').value,
-                                document.getElementById('password_confirmation').value,
-                                document.getElementById('cep').value,
-                                document.getElementById('rua').value,
-                                document.getElementById('bairro').value,
-                                document.getElementById('cidade').value,
-                                document.getElementById('uf').value,
-                                document.getElementById('ibge').value)
-    let erroPassword = cadastroController.passwordIsValid(cadastro.password, cadastro.password_confirmation)
-    let erroCPF= cadastroController.IsValidCPF(cadastro.array_cadastro);
-    if ((erroPassword == true) && 
-        (erroCPF == true) &&
-        (cadastro.rua != '') && 
-        (cadastro.bairro!='') && 
-        (cadastro.cidade!='') && 
-        (cadastro.uf != '') && 
-        (cadastro.ibge!='')) {
+    cadastrar = function () {
+        const cadastroController = new CadastroController();
+        const cadastro = new Cadastro(document.getElementById('first_name').value,
+            document.getElementById('last_name').value,
+            document.getElementById('rg').value,
+            document.getElementById('cpf').value,
+            document.getElementById('email').value,
+            document.getElementById('phone').value,
+            document.getElementById('password').value,
+            document.getElementById('password_confirmation').value,
+            document.getElementById('cep').value,
+            document.getElementById('rua').value,
+            document.getElementById('bairro').value,
+            document.getElementById('cidade').value,
+            document.getElementById('uf').value,
+            document.getElementById('ibge').value)
+        let erroPassword = cadastroController.passwordIsValid(cadastro.password, cadastro.password_confirmation)
+        let erroCPF = cadastroController.IsValidCPF(cadastroController.array_cadastro);
+        let erroEmail = cadastroController.emailIsValid(cadastro.email, cadastroController.array_cadastro) 
+        let erroRG = cadastroController.rgIsValid(cadastro.rg, cadastroController.array_cadastro)
+        let erroPhone = cadastroController.phoneIsValid(cadastro.phone, cadastroController.array_cadastro)
+        if ((erroPassword == true) &&
+            (erroCPF == true) &&
+            (cadastro.rua != '') &&
+            (cadastro.bairro != '') &&
+            (cadastro.cidade != '') &&
+            (cadastro.uf != '') &&
+            (cadastro.ibge != '') &&
+            (erroEmail == true) &&
+            (erroRG == true) &&
+            (erroPhone == true)) {
             cadastroController.array_cadastro.push(cadastro)
             alert("Você se cadastrou na lista de Espera");
+        }
+        else if (erroCPF != true) {
+            alert(`${erroCPF}`);
+        }
+        else if (erroPassword != true) {
+            alert(`${erroPassword}`);
+        }
+        else if ((cadastro.rua == '') &&
+            (cadastro.bairro == '') &&
+            (cadastro.cidade == '') &&
+            (cadastro.uf == '') &&
+            (cadastro.ibge == '')) {
+            alert(`CEP inválido`);
+        }
+        else if(erroEmail != true){
+            alert(`${erroEmail}`)
+        }
+        else if(erroRG != true){
+            alert(`${erroRG}`)
+        }
+        else if(erroPhone != true){
+            alert(`${erroPhone}`)
+        }
     }
-    else if(erroCPF !=true){
-        alert(`${erroCPF}`);
-    }        
-    else if(erroPassword != true) {
-        alert(`${erroPassword}`);
-    }
-    else if((cadastro.rua == '') && 
-            (cadastro.bairro=='') && 
-            (cadastro.cidade=='') && 
-            (cadastro.uf == '') && 
-            (cadastro.ibge=='')) {
-                alert(`CEP inválido`);
-    }
-}
 
 
 /*const form = document.querySelector('form');
